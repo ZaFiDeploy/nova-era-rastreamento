@@ -1,0 +1,512 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+const title = "Sua Central Vale Quanto? Como uma Contabilidade Bem Estruturada Pode Valorizar sua Empresa na Hora da Venda";
+const description = "Descubra quanto a sua central de rastreamento vale hoje e como uma contabilidade bem estruturada aumenta o valor da empresa na hora da venda. Live gratuita e online — 30 de setembro, quarta-feira, às 16h30.";
+
+const publico = [
+  {
+    titulo: "Donos de centrais e associações de proteção veicular",
+    texto: "Querem saber quanto a empresa vale hoje — e o que muda esse número.",
+    icone: '<path d="M4 21V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v13M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M9 21v-4h2v4M2 21h20"/>',
+  },
+  {
+    titulo: "Diretores financeiros e gestores administrativos",
+    texto: "Precisam de números e contratos que sustentem o valuation.",
+    icone: '<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>',
+  },
+  {
+    titulo: "Empresários em sucessão, fusão ou captação",
+    texto: "Vão passar por due diligence e não podem ser surpreendidos.",
+    icone: '<path d="M11 17l2 2a1 1 0 0 0 1.4 0l3.6-3.6a1 1 0 0 0 0-1.4l-5-5H8L3 13"/><path d="M13 9l3-3 5 5-2 2"/><path d="M3 8l4-4 4 4"/>',
+  },
+];
+
+const aprendizados = [
+  "Por que a contabilidade define o preço de venda da sua central",
+  "Como o comprador avalia: múltiplo de EBITDA, carteira, churn e recorrência",
+  "Os erros contábeis que derrubam o valuation",
+  "O que organizar para passar em uma due diligence",
+  "Como valorizar a central antes de existir proposta na mesa",
+  "Do primeiro laudo até a mesa de negociação",
+];
+
+// Fotos em /public. Se o arquivo não existir, aparecem as iniciais no lugar.
+const convidadas = [
+  {
+    nome: "Hélvia Eleto",
+    iniciais: "HE",
+    foto: "/helvia-eleto.jpg",
+    posicao: "50% 16%",
+    cargo: "Diretora Executiva | NTW Contabilidade",
+    bio: "A visão de quem organiza o financeiro por dentro: como a contabilidade bem estruturada vira argumento de valor na hora da venda.",
+  },
+  {
+    nome: "Franscielli Bárbosa",
+    iniciais: "FB",
+    foto: "/franscielli-barbosa.jpg",
+    posicao: "43% 21%",
+    cargo: "CEO | Honkai Assessoria em Gestão e Avaliação de Empresas",
+    bio: "A ponta do valuation: como o mercado precifica uma central e o que derruba o preço em uma due diligence.",
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body style="background-color: #070710; color: #ffffff; min-height: 100vh; font-family: Inter, sans-serif;">
+
+    <!-- Fundo gradiente rosa -->
+    <div style="position: fixed; inset: 0; z-index: 0; pointer-events: none;">
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(var(--brand-rgb),0.18) 0%, transparent 70%); animation: floatBlob 18s ease-in-out infinite;"></div>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(var(--brand-rgb),0.08) 0%, transparent 70%); animation: floatBlob 22s ease-in-out infinite reverse;"></div>
+    </div>
+
+    <div style="position: relative; z-index: 1;">
+      <div style="max-width: 560px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 20px);">
+
+        <!-- ===== LOGO ===== -->
+        <div class="reveal" style="text-align: center; padding: clamp(26px, 7vw, 36px) 0 clamp(18px, 5vw, 24px); transition-delay: 0ms;">
+          <img
+            src="/logo-nova-era-rosa.png"
+            alt="A Nova Era do Rastreamento Veicular"
+            width="1536"
+            height="1023"
+            fetchpriority="high"
+            style="width: min(280px, 72vw); height: auto; display: inline-block;"
+          />
+        </div>
+
+        <!-- ===== BADGE EDIÇÃO ===== -->
+        <div class="reveal" style="text-align: center; margin-bottom: clamp(16px, 5vw, 24px); transition-delay: 90ms;">
+          <span class="badge-pulse" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(var(--brand-rgb),0.12); border: 1px solid rgba(var(--brand-rgb),0.35); border-radius: 9999px; padding: 5px 14px; font-size: 11px; font-weight: 700; color: var(--brand-soft); letter-spacing: 0.06em; text-transform: uppercase;">
+            Live Exclusiva — 8ª Edição
+          </span>
+        </div>
+
+        <!-- ===== TÍTULO ===== -->
+        <div class="reveal" style="text-align: center; margin-bottom: clamp(14px, 4vw, 20px); transition-delay: 180ms;">
+          <h1 style="font-size: clamp(22px, 6vw, 36px); font-weight: 900; line-height: 1.25; color: #ffffff; margin: 0; word-break: break-word; text-wrap: balance;">
+            Sua Central
+            <span style="color: var(--brand-soft); display: inline;">Vale Quanto?</span>
+          </h1>
+          <p style="font-size: clamp(14px, 3.6vw, 17px); font-weight: 800; line-height: 1.4; color: #e5e7eb; margin: 10px 0 0 0; text-wrap: balance;">
+            Como uma contabilidade bem estruturada pode valorizar sua empresa na hora da venda
+          </p>
+        </div>
+
+        <!-- ===== SUBTÍTULO ===== -->
+        <div class="reveal" style="text-align: center; margin-bottom: clamp(20px, 6vw, 28px); transition-delay: 270ms;">
+          <p style="font-size: clamp(14px, 3.8vw, 16px); color: #9ca3af; line-height: 1.65; margin: 0; text-wrap: pretty;">
+            Como o mercado precifica uma central e por que a contabilidade decide
+            <strong style="color: #e5e7eb;">quanto a sua empresa vale na hora da venda.</strong>
+          </p>
+        </div>
+
+        <!-- ===== DATA E HORÁRIO ===== -->
+        <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: clamp(14px, 4vw, 20px); transition-delay: 360ms;">
+          <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px clamp(12px, 4vw, 16px);">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <span style="font-size: 13px; color: #d1d5db;">Quarta, <strong style="color: #ffffff;">30/09</strong></span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; background: rgba(var(--brand-rgb),0.1); border: 1px solid rgba(var(--brand-rgb),0.3); border-radius: 10px; padding: 10px clamp(12px, 4vw, 16px);">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span style="font-size: 13px; color: #d1d5db;">Horário: <strong style="color: var(--brand-soft);">16H30</strong></span>
+          </div>
+        </div>
+
+        <!-- ===== TRANSMISSÃO ===== -->
+        <div class="reveal" style="display: flex; justify-content: center; margin-bottom: clamp(28px, 8vw, 40px); transition-delay: 400ms;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 9999px; padding: 8px 16px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff0033" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.13C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.52A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.13c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.13A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8z"/><path d="M9.6 15.6 15.8 12 9.6 8.4z" fill="#ffffff"/></svg>
+            <span style="font-size: 12px; font-weight: 700; color: #d1d5db; letter-spacing: 0.03em;">Ao vivo e gratuito no YouTube</span>
+          </div>
+        </div>
+
+        <!-- ===== FORMULÁRIO ===== -->
+        <div class="reveal" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: clamp(22px, 6vw, 32px) clamp(18px, 5vw, 24px); margin-bottom: clamp(36px, 9vw, 56px); transition-delay: 450ms;">
+          <p style="text-align: center; font-size: 14px; font-weight: 700; color: #e5e7eb; margin: 0 0 20px 0;">
+            Garanta sua vaga gratuita agora:
+          </p>
+
+          <div id="form-fields" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+            <input
+              id="field-name"
+              type="text"
+              placeholder="Seu nome completo"
+              autocomplete="name"
+              style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box;"
+            />
+            <input
+              id="field-email"
+              type="email"
+              placeholder="Seu melhor e-mail"
+              autocomplete="email"
+              style="width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box;"
+            />
+            <div style="display: flex; align-items: center; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; box-sizing: border-box;" id="phone-wrapper">
+              <span style="padding: 13px 12px 13px 16px; color: rgba(255,255,255,0.5); font-size: 14px; white-space: nowrap; border-right: 1px solid rgba(255,255,255,0.1); user-select: none;">+55</span>
+              <input
+                id="field-phone"
+                type="tel"
+                placeholder="(11) 9 0000-0000"
+                maxlength="16"
+                autocomplete="tel"
+                style="flex: 1; padding: 13px 16px; background: transparent; border: none; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box; min-width: 0;"
+              />
+            </div>
+          </div>
+
+          <div id="form-error" role="alert" style="display:none; color:#f87171; font-size:13px; text-align:center; margin-bottom:10px;"></div>
+
+          <div id="form-success" style="display:none; text-align:center; padding: 16px 0;">
+            <div style="width: 36px; height: 36px; margin: 0 auto 10px; background: rgba(var(--brand-rgb),0.15); border: 1px solid rgba(var(--brand-rgb),0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-9"/></svg>
+            </div>
+            <p style="font-size:15px; font-weight:800; color:#ffffff; margin:0 0 4px 0;">Inscrição confirmada!</p>
+            <p style="font-size:13px; color:#9ca3af; margin:0;">Fique de olho no seu WhatsApp e e-mail.</p>
+          </div>
+
+          <button
+            id="btn-submit"
+            type="button"
+            class="btn-brand"
+            style="width: 100%; padding: 15px; background: linear-gradient(135deg, var(--brand), var(--brand-deep)); border: none; border-radius: 10px; color: #ffffff; font-size: clamp(13px, 3.6vw, 15px); font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; white-space: nowrap; box-shadow: 0 4px 20px rgba(var(--brand-glow),0.3);">
+            GARANTIR MINHA VAGA →
+          </button>
+
+          <p style="text-align: center; font-size: 11px; color: #4b5563; margin: 14px 0 0 0; display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#4b5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            Evento 100% gratuito e online. Sua vaga é pessoal e intransferível.
+          </p>
+        </div>
+
+        <!-- ===== PARA QUEM É ===== -->
+        <div class="reveal" style="margin-bottom: clamp(36px, 9vw, 56px);">
+          <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px 0;">
+            Para quem é essa live
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            {publico.map((item) => (
+              <div class="hover-card" style="display: flex; align-items: flex-start; gap: 14px; background: rgba(var(--brand-rgb),0.06); border: 1px solid rgba(var(--brand-rgb),0.25); border-radius: 14px; padding: clamp(14px, 4vw, 18px);">
+                <div style="flex-shrink: 0; width: 32px; height: 32px; background: rgba(var(--brand-rgb),0.15); border-radius: 9px; display: flex; align-items: center; justify-content: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={item.icone} /></div>
+                <div>
+                  <p style="font-size: clamp(13px, 3.6vw, 14px); font-weight: 800; color: #ffffff; margin: 0 0 4px 0; text-wrap: pretty;">{item.titulo}</p>
+                  <p style="font-size: clamp(12px, 3.3vw, 13px); color: #9ca3af; margin: 0; line-height: 1.5; text-wrap: pretty;">{item.texto}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ===== NESTA LIVE VOCÊ VAI APRENDER ===== -->
+        <div class="reveal" style="margin-bottom: clamp(36px, 9vw, 56px);">
+          <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px 0;">
+            Nesta live você vai aprender
+          </p>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden;">
+            {aprendizados.map((item, i) => (
+              <div class="reveal-item" style={`display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; transition-delay: ${i * 70}ms;${i > 0 ? " border-top: 1px solid rgba(255,255,255,0.05);" : ""}`}>
+                <div style="flex-shrink: 0; width: 20px; height: 20px; background: rgba(var(--brand-rgb),0.2); border: 1px solid rgba(var(--brand-rgb),0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12l5 5 9-9"/>
+                  </svg>
+                </div>
+                <p style="font-size: clamp(12.5px, 3.5vw, 13.5px); color: #d1d5db; line-height: 1.5; margin: 0; text-wrap: pretty;">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ===== CONVIDADAS DA EDIÇÃO ===== -->
+        <div class="reveal" style="margin-bottom: 20px;">
+          <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 12px 0;">
+            Convidadas desta edição
+          </p>
+          <div class="guest-grid">
+            {convidadas.map((c) => (
+              <div class="hover-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden;">
+                <div class="photo-slot" style="position: relative; overflow: hidden; height: clamp(210px, 52vw, 300px); background: linear-gradient(160deg, rgba(var(--brand-rgb),0.14), rgba(0,0,0,0));">
+                  <span class="photo-fallback" aria-hidden="true">{c.iniciais}</span>
+                  <img
+                    class="photo-zoom"
+                    src={c.foto}
+                    alt={c.nome}
+                    loading="lazy"
+                    onerror="this.closest('.photo-slot').classList.add('photo-missing'); this.remove();"
+                    style={`width: 100%; height: 100%; display: block; object-fit: cover; object-position: ${c.posicao};`}
+                  />
+                  <div style="position: absolute; inset: 0px; background: linear-gradient(transparent 60%, rgb(7,7,16) 100%); pointer-events: none;"></div>
+                </div>
+                <div style="padding: 18px 18px 20px;">
+                  <h3 style="font-size: 17px; font-weight: 900; color: #ffffff; margin: 0 0 4px 0;">{c.nome}</h3>
+                  <p style="font-size: 11px; font-weight: 700; color: var(--brand-soft); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 10px 0; text-wrap: pretty;">{c.cargo}</p>
+                  <p style="font-size: clamp(12.5px, 3.4vw, 13px); color: #9ca3af; line-height: 1.55; margin: 0; text-wrap: pretty;">{c.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- ===== APRESENTADO POR: VINICIUS COSTA ===== -->
+        <div class="reveal" style="margin-bottom: clamp(36px, 9vw, 56px);">
+          <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 12px 0;">
+            Apresentado por
+          </p>
+          <div class="hover-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden;">
+            <div style="position: relative; overflow: hidden; height: clamp(240px, 62vw, 320px);">
+              <img
+                class="photo-zoom"
+                src="/vinicius-foto.jpg"
+                alt="Vinicius Costa"
+                loading="lazy"
+                style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: 68% 38%;"
+              />
+              <div style="position: absolute; inset: 0px; background: linear-gradient(transparent 60%, rgb(7,7,16) 100%);"></div>
+            </div>
+            <div style="padding: 20px 20px 22px;">
+              <h3 style="font-size: 18px; font-weight: 900; color: #ffffff; margin: 0 0 4px 0;">Vinicius Costa</h3>
+              <p style="font-size: 11px; font-weight: 700; color: var(--brand-soft); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px 0;">Sócio Fundador da Nova Era do Rastreamento</p>
+              <p style="font-size: clamp(12.5px, 3.4vw, 13px); color: #9ca3af; line-height: 1.55; margin: 0; text-wrap: pretty;">
+                <strong style="color: #e5e7eb;">20 anos no mercado de rastreamento</strong> e uma das operações mais sólidas do setor no Brasil. Criador do movimento Nova Era.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== A NOVA ERA (MANIFESTO) ===== -->
+        <div class="reveal" style="margin-bottom: clamp(36px, 9vw, 56px);">
+          <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px 0;">
+            A Nova Era
+          </p>
+          <div style="background: linear-gradient(160deg, rgba(var(--brand-rgb),0.1), rgba(0,0,0,0)); border: 1px solid rgba(var(--brand-rgb),0.25); border-radius: 16px; padding: 32px 24px; text-align: center;">
+            <p style="font-size: clamp(16px, 4.4vw, 19px); font-weight: 900; line-height: 1.35; color: #ffffff; margin: 0 0 16px 0; text-wrap: balance;">
+              EXISTEM DOIS TIPOS DE CENTRAL DE RASTREAMENTO:
+              <span style="color: var(--brand-soft);">AS QUE ESTÃO CRIANDO A NOVA ERA</span>,
+              E AS QUE VÃO PRECISAR SE ADAPTAR A ELA.
+            </p>
+            <p style="font-size: clamp(13px, 3.5vw, 14px); color: #9ca3af; line-height: 1.65; margin: 0; text-wrap: pretty;">
+              A diferença entre os dois grupos não é sorte. É quem decidiu prestar atenção primeiro.
+            </p>
+          </div>
+        </div>
+
+        <!-- ===== CTA SIMPLES ===== -->
+        <div class="reveal" style="margin-bottom: 40px; text-align: center;">
+          <button
+            id="btn-scroll-form"
+            type="button"
+            class="btn-brand"
+            style="width: 100%; padding: 16px; background: linear-gradient(135deg, var(--brand), var(--brand-deep)); border: none; border-radius: 10px; color: #ffffff; font-size: clamp(13px, 3.6vw, 15px); font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; white-space: nowrap; box-shadow: 0 4px 20px rgba(var(--brand-glow),0.3);">
+            QUERO MINHA VAGA →
+          </button>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div style="text-align: center; padding: 16px 0 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+          <p style="font-size: 11px; color: #374151; margin: 0;">
+            © 2026 Nova Era das Centrais de Rastreamento. Todos os direitos reservados.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Paleta global: precisa ficar fora do escopo do Astro para valer nos style inline -->
+    <style is:inline>
+      :root {
+        /* Cor de referência da marca: rosa */
+        --brand: #ec0f76;
+        --brand-deep: #a8055a;
+        --brand-soft: #ff4fa3;
+        --brand-rgb: 255, 79, 163;
+        --brand-glow: 236, 15, 118;
+      }
+    </style>
+
+    <style is:inline>
+      input::placeholder { color: #6b7280; }
+      input:focus { border-color: rgba(var(--brand-rgb),0.5) !important; outline: none !important; }
+      #phone-wrapper:focus-within { border-color: rgba(var(--brand-rgb),0.5) !important; }
+      .btn-brand:hover { opacity: 0.92; transform: translateY(-1px); }
+      .btn-brand:focus-visible { outline: 2px solid var(--brand-soft); outline-offset: 3px; }
+      .btn-brand {
+        transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        animation: ctaGlow 2.8s ease-in-out infinite;
+      }
+
+      .guest-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      @media (min-width: 480px) {
+        .guest-grid { grid-template-columns: 1fr 1fr; }
+      }
+
+      /* Placeholder mostrado enquanto a foto da convidada não estiver em /public */
+      .photo-fallback {
+        position: absolute;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 44px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        color: rgba(var(--brand-rgb),0.55);
+      }
+      .photo-slot.photo-missing .photo-fallback { display: flex; }
+
+      @keyframes floatBlob {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-16px, 18px) scale(1.08); }
+      }
+
+      @keyframes ctaGlow {
+        0%, 100% { box-shadow: 0 4px 20px rgba(var(--brand-glow),0.3); }
+        50% { box-shadow: 0 4px 28px rgba(var(--brand-glow),0.5); }
+      }
+
+      @keyframes badgeGlow {
+        0%, 100% { box-shadow: 0 0 0 rgba(var(--brand-glow),0); }
+        50% { box-shadow: 0 0 14px rgba(var(--brand-glow),0.4); }
+      }
+      .badge-pulse { animation: badgeGlow 2.6s ease-in-out infinite; }
+
+      .reveal, .reveal-item {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+      }
+      .reveal.in-view, .reveal-item.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hover-card {
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(var(--brand-rgb),0.5) !important;
+      }
+      .photo-zoom {
+        position: relative;
+        transition: transform 0.5s ease;
+      }
+      .hover-card:hover .photo-zoom {
+        transform: scale(1.05);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal, .reveal-item { opacity: 1 !important; transform: none !important; transition: none !important; }
+        .badge-pulse, .btn-brand, [style*="floatBlob"] { animation: none !important; }
+      }
+    </style>
+
+    <script is:inline>
+      const revealEls = document.querySelectorAll('.reveal, .reveal-item');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach((el) => revealObserver.observe(el));
+
+      const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwpJ0rFd_L7DhatRrw62YgPCxzS1eBLsQlo6_h3JfeyZ5qSD3RUOITQASkz-uYUMB-Y/exec';
+      const LIVE_LABEL = 'Live 30/09';
+
+      const phoneInput = document.getElementById('field-phone');
+      const phoneWrapper = document.getElementById('phone-wrapper');
+
+      phoneInput.addEventListener('input', function () {
+        let digits = this.value.replace(/\D/g, '').slice(0, 11);
+        let masked = '';
+        if (digits.length > 0) masked += '(' + digits.slice(0, 2);
+        if (digits.length >= 2) masked += ') ' + digits.slice(2, 7);
+        if (digits.length >= 7) masked += '-' + digits.slice(7, 11);
+        this.value = masked;
+      });
+
+      document.getElementById('btn-scroll-form').addEventListener('click', function () {
+        const nameField = document.getElementById('field-name');
+        nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => nameField.focus(), 600);
+      });
+
+      document.getElementById('btn-submit').addEventListener('click', async function () {
+        const btn = this;
+        const name     = document.getElementById('field-name').value.trim();
+        const email    = document.getElementById('field-email').value.trim();
+        const phoneRaw = document.getElementById('field-phone').value.trim();
+        const phone    = phoneRaw ? '+55 ' + phoneRaw : '';
+        const errEl    = document.getElementById('form-error');
+
+        errEl.style.display = 'none';
+
+        if (!name || !email || !phoneRaw) {
+          errEl.textContent = 'Por favor, preencha todos os campos.';
+          errEl.style.display = 'block';
+          return;
+        }
+
+        const digits = phoneRaw.replace(/\D/g, '');
+        if (digits.length < 10) {
+          errEl.textContent = 'Digite um número de WhatsApp válido com DDD.';
+          errEl.style.display = 'block';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+
+        try {
+          const res = await fetch(SHEETS_URL, {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (res.ok) {
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: LIVE_LABEL });
+            window.location.href = '/obrigado';
+          } else {
+            throw new Error('Resposta inesperada: ' + res.status);
+          }
+        } catch (err) {
+          try {
+            await fetch(SHEETS_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'text/plain' },
+              body: JSON.stringify({ name, email, phone }),
+            });
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: LIVE_LABEL });
+            window.location.href = '/obrigado';
+          } catch (_) {
+            errEl.textContent = 'Erro ao enviar. Verifique sua conexão e tente novamente.';
+            errEl.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'GARANTIR MINHA VAGA →';
+          }
+        }
+      });
+    </script>
+
+  </body>
+</html>

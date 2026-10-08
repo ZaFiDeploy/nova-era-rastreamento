@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Nova Era do Mercado de Rastreamento",
+  description = "Central de rastreamento veicular — gestão de frotas e capacitação profissional."
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+
+<!-- Basic Meta Tags -->
+<meta name="keywords" content="rastreamento veicular, central de rastreamento, valuation de empresas, contabilidade, gestão de frotas, live" />
+<meta name="author" content="Nova Era do Mercado de Rastreamento" />
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.png?v=4" type="image/png" />
+<link rel="shortcut icon" href="/favicon.png?v=4" type="image/png" />
+<link rel="apple-touch-icon" href="/favicon.png?v=4" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://anovaeradorastreamento.com.br/" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="https://anovaeradorastreamento.com.br/og-image-live-30-09.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://anovaeradorastreamento.com.br/" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content="https://anovaeradorastreamento.com.br/og-image-live-30-09.png" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://anovaeradorastreamento.com.br/" />
+
+<!-- Additional SEO -->
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<!-- Theme Color for Mobile Browsers -->
+<meta name="theme-color" content="#070710" />
+
+<!-- Meta Pixel -->
+<script is:inline>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2404991759962954');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2404991759962954&ev=PageView&noscript=1" />
+</noscript>
+
+<!---- Alpine  -->
+<script is:inline defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js">
+</script>
