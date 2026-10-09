@@ -423,89 +423,11 @@ const convidadas = [
         });
       }, { threshold: 0.12 });
       revealEls.forEach((el) => revealObserver.observe(el));
+    </script>
 
-      const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwpJ0rFd_L7DhatRrw62YgPCxzS1eBLsQlo6_h3JfeyZ5qSD3RUOITQASkz-uYUMB-Y/exec';
-      const LIVE_LABEL = 'Live 30/09';
-
-      const phoneInput = document.getElementById('field-phone');
-      const phoneWrapper = document.getElementById('phone-wrapper');
-
-      phoneInput.addEventListener('input', function () {
-        let digits = this.value.replace(/\D/g, '').slice(0, 11);
-        let masked = '';
-        if (digits.length > 0) masked += '(' + digits.slice(0, 2);
-        if (digits.length >= 2) masked += ') ' + digits.slice(2, 7);
-        if (digits.length >= 7) masked += '-' + digits.slice(7, 11);
-        this.value = masked;
-      });
-
-      document.getElementById('btn-scroll-form').addEventListener('click', function () {
-        const nameField = document.getElementById('field-name');
-        nameField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(() => nameField.focus(), 600);
-      });
-
-      document.getElementById('btn-submit').addEventListener('click', async function () {
-        const btn = this;
-        const name     = document.getElementById('field-name').value.trim();
-        const email    = document.getElementById('field-email').value.trim();
-        const phoneRaw = document.getElementById('field-phone').value.trim();
-        const phone    = phoneRaw ? '+55 ' + phoneRaw : '';
-        const errEl    = document.getElementById('form-error');
-
-        errEl.style.display = 'none';
-
-        if (!name || !email || !phoneRaw) {
-          errEl.textContent = 'Por favor, preencha todos os campos.';
-          errEl.style.display = 'block';
-          return;
-        }
-
-        const digits = phoneRaw.replace(/\D/g, '');
-        if (digits.length < 10) {
-          errEl.textContent = 'Digite um número de WhatsApp válido com DDD.';
-          errEl.style.display = 'block';
-          return;
-        }
-
-        btn.disabled = true;
-        btn.textContent = 'Enviando...';
-
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('phone', phone);
-
-        try {
-          const res = await fetch(SHEETS_URL, {
-            method: 'POST',
-            body: formData,
-          });
-
-          if (res.ok) {
-            if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: LIVE_LABEL });
-            window.location.href = '/obrigado';
-          } else {
-            throw new Error('Resposta inesperada: ' + res.status);
-          }
-        } catch (err) {
-          try {
-            await fetch(SHEETS_URL, {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: { 'Content-Type': 'text/plain' },
-              body: JSON.stringify({ name, email, phone }),
-            });
-            if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: LIVE_LABEL });
-            window.location.href = '/obrigado';
-          } catch (_) {
-            errEl.textContent = 'Erro ao enviar. Verifique sua conexão e tente novamente.';
-            errEl.style.display = 'block';
-            btn.disabled = false;
-            btn.textContent = 'GARANTIR MINHA VAGA →';
-          }
-        }
-      });
+    <!-- Formulário de inscrição: lógica em src/scripts/inscricao.js (depende só dos IDs dos campos) -->
+    <script>
+      import "../scripts/inscricao.js";
     </script>
 
   </body>
