@@ -12,7 +12,7 @@
 // Planilha que recebe as inscrições (Web App do Google Apps Script).
 const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwpJ0rFd_L7DhatRrw62YgPCxzS1eBLsQlo6_h3JfeyZ5qSD3RUOITQASkz-uYUMB-Y/exec';
 // Nome do evento no Meta Pixel — troque a cada nova live.
-const LIVE_LABEL = 'Live 30/09';
+const LIVE_LABEL = 'Live 28/10';
 // Para onde vai depois de inscrever.
 const REDIRECT_URL = '/obrigado';
 

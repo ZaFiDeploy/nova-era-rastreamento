@@ -1,53 +1,52 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 
-const title = "Sua Central Vale Quanto? Como uma Contabilidade Bem Estruturada Pode Valorizar sua Empresa na Hora da Venda";
-const description = "Descubra quanto a sua central de rastreamento vale hoje e como uma contabilidade bem estruturada aumenta o valor da empresa na hora da venda. Live gratuita e online — 30 de setembro, quarta-feira, às 16h30.";
+const title = "O Futuro do Rastreamento Veicular: o que muda com a Lei nº 14.967/2024 e a nova regulamentação da segurança privada";
+const description = "Live gratuita e online sobre o que a Lei nº 14.967/2024 e a nova regulamentação da segurança privada mudam para centrais de rastreamento e associações. Quarta-feira, 28 de outubro, às 16h30.";
 
 const publico = [
   {
-    titulo: "Donos de centrais e associações de proteção veicular",
-    texto: "Querem saber quanto a empresa vale hoje — e o que muda esse número.",
+    titulo: "Donos de centrais de rastreamento e associações de proteção veicular",
+    texto: "Precisam entender o que a nova lei exige da empresa e o que muda no negócio.",
     icone: '<path d="M4 21V8a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v13M14 21v-9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v9"/><path d="M9 21v-4h2v4M2 21h20"/>',
   },
   {
-    titulo: "Diretores financeiros e gestores administrativos",
-    texto: "Precisam de números e contratos que sustentem o valuation.",
+    titulo: "Gestores de operação e monitoramento",
+    texto: "Vão conduzir a adequação no dia a dia sem parar a operação.",
     icone: '<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>',
   },
   {
-    titulo: "Empresários em sucessão, fusão ou captação",
-    texto: "Vão passar por due diligence e não podem ser surpreendidos.",
-    icone: '<path d="M11 17l2 2a1 1 0 0 0 1.4 0l3.6-3.6a1 1 0 0 0 0-1.4l-5-5H8L3 13"/><path d="M13 9l3-3 5 5-2 2"/><path d="M3 8l4-4 4 4"/>',
+    titulo: "Jurídico, compliance e áreas comerciais",
+    texto: "Precisam ajustar contratos, documentação e o discurso com o cliente.",
+    icone: '<path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/>',
   },
 ];
 
 const aprendizados = [
-  "Por que a contabilidade define o preço de venda da sua central",
-  "Como o comprador avalia: múltiplo de EBITDA, carteira, churn e recorrência",
-  "Os erros contábeis que derrubam o valuation",
-  "O que organizar para passar em uma due diligence",
-  "Como valorizar a central antes de existir proposta na mesa",
-  "Do primeiro laudo até a mesa de negociação",
+  "O que é a Lei nº 14.967/2024 e por que ela afeta o mercado de rastreamento",
+  "O que muda com a nova regulamentação da segurança privada",
+  "Quais pontos da sua central precisam de atenção agora",
+  "Os riscos de esperar a regulamentação chegar para se mexer",
+  "Como transformar a adequação em vantagem competitiva",
 ];
 
 // Fotos em /public. Se o arquivo não existir, aparecem as iniciais no lugar.
-const convidadas = [
+const convidados = [
   {
-    nome: "Hélvia Eleto",
-    iniciais: "HE",
-    foto: "/helvia-eleto.jpg",
-    posicao: "50% 16%",
-    cargo: "Diretora Executiva | NTW Contabilidade",
-    bio: "A visão de quem organiza o financeiro por dentro: como a contabilidade bem estruturada vira argumento de valor na hora da venda.",
+    nome: "Alisson Rodrigues da Cruz",
+    iniciais: "AC",
+    foto: "/alisson-cruz.jpg",
+    posicao: "50% 20%",
+    cargo: "Fundador e COO | ARC Consultoria",
+    bio: "A visão de quem conduz a operação: o que a nova lei muda no dia a dia de centrais e associações e como se adequar sem travar o negócio.",
   },
   {
-    nome: "Franscielli Bárbosa",
-    iniciais: "FB",
-    foto: "/franscielli-barbosa.jpg",
-    posicao: "43% 21%",
-    cargo: "CEO | Honkai Assessoria em Gestão e Avaliação de Empresas",
-    bio: "A ponta do valuation: como o mercado precifica uma central e o que derruba o preço em uma due diligence.",
+    nome: "Dalton Castro dos Santos",
+    iniciais: "DS",
+    foto: "/dalton-santos.jpg",
+    posicao: "50% 20%",
+    cargo: "Sócio e CCO | ARC Consultoria",
+    bio: "O lado comercial da adequação: como a nova regulamentação impacta contratos, vendas e o posicionamento da central diante do cliente.",
   },
 ];
 ---
@@ -60,7 +59,7 @@ const convidadas = [
 
   <body style="background-color: #070710; color: #ffffff; min-height: 100vh; font-family: Inter, sans-serif;">
 
-    <!-- Fundo gradiente rosa -->
+    <!-- Fundo gradiente da marca -->
     <div style="position: fixed; inset: 0; z-index: 0; pointer-events: none;">
       <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(var(--brand-rgb),0.18) 0%, transparent 70%); animation: floatBlob 18s ease-in-out infinite;"></div>
       <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: radial-gradient(ellipse 60% 40% at 50% 100%, rgba(var(--brand-rgb),0.08) 0%, transparent 70%); animation: floatBlob 22s ease-in-out infinite reverse;"></div>
@@ -84,26 +83,26 @@ const convidadas = [
         <!-- ===== BADGE EDIÇÃO ===== -->
         <div class="reveal" style="text-align: center; margin-bottom: clamp(16px, 5vw, 24px); transition-delay: 90ms;">
           <span class="badge-pulse" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(var(--brand-rgb),0.12); border: 1px solid rgba(var(--brand-rgb),0.35); border-radius: 9999px; padding: 5px 14px; font-size: 11px; font-weight: 700; color: var(--brand-soft); letter-spacing: 0.06em; text-transform: uppercase;">
-            Live Exclusiva — 8ª Edição
+            Live Exclusiva — 9ª Edição
           </span>
         </div>
 
         <!-- ===== TÍTULO ===== -->
         <div class="reveal" style="text-align: center; margin-bottom: clamp(14px, 4vw, 20px); transition-delay: 180ms;">
           <h1 style="font-size: clamp(22px, 6vw, 36px); font-weight: 900; line-height: 1.25; color: #ffffff; margin: 0; word-break: break-word; text-wrap: balance;">
-            Sua Central
-            <span style="color: var(--brand-soft); display: inline;">Vale Quanto?</span>
+            O Futuro do Rastreamento
+            <span style="color: var(--brand-soft); display: inline;">Veicular</span>
           </h1>
           <p style="font-size: clamp(14px, 3.6vw, 17px); font-weight: 800; line-height: 1.4; color: #e5e7eb; margin: 10px 0 0 0; text-wrap: balance;">
-            Como uma contabilidade bem estruturada pode valorizar sua empresa na hora da venda
+            O que muda com a Lei nº 14.967/2024 e a nova regulamentação da segurança privada
           </p>
         </div>
 
         <!-- ===== SUBTÍTULO ===== -->
         <div class="reveal" style="text-align: center; margin-bottom: clamp(20px, 6vw, 28px); transition-delay: 270ms;">
           <p style="font-size: clamp(14px, 3.8vw, 16px); color: #9ca3af; line-height: 1.65; margin: 0; text-wrap: pretty;">
-            Como o mercado precifica uma central e por que a contabilidade decide
-            <strong style="color: #e5e7eb;">quanto a sua empresa vale na hora da venda.</strong>
+            A regulamentação da segurança privada chegou ao rastreamento.
+            <strong style="color: #e5e7eb;">Entenda o que muda para a sua central antes que vire problema.</strong>
           </p>
         </div>
 
@@ -111,7 +110,7 @@ const convidadas = [
         <div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: clamp(14px, 4vw, 20px); transition-delay: 360ms;">
           <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 10px clamp(12px, 4vw, 16px);">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            <span style="font-size: 13px; color: #d1d5db;">Quarta, <strong style="color: #ffffff;">30/09</strong></span>
+            <span style="font-size: 13px; color: #d1d5db;">Quarta, <strong style="color: #ffffff;">28/10</strong></span>
           </div>
           <div style="display: flex; align-items: center; gap: 8px; background: rgba(var(--brand-rgb),0.1); border: 1px solid rgba(var(--brand-rgb),0.3); border-radius: 10px; padding: 10px clamp(12px, 4vw, 16px);">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -224,13 +223,13 @@ const convidadas = [
           </div>
         </div>
 
-        <!-- ===== CONVIDADAS DA EDIÇÃO ===== -->
+        <!-- ===== CONVIDADOS DA EDIÇÃO ===== -->
         <div class="reveal" style="margin-bottom: 20px;">
           <p style="text-align: center; font-size: 11px; font-weight: 900; color: var(--brand-soft); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 12px 0;">
-            Convidadas desta edição
+            Convidados desta edição
           </p>
           <div class="guest-grid">
-            {convidadas.map((c) => (
+            {convidados.map((c) => (
               <div class="hover-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden;">
                 <div class="photo-slot" style="position: relative; overflow: hidden; height: clamp(210px, 52vw, 300px); background: linear-gradient(160deg, rgba(var(--brand-rgb),0.14), rgba(0,0,0,0));">
                   <span class="photo-fallback" aria-hidden="true">{c.iniciais}</span>
@@ -321,7 +320,7 @@ const convidadas = [
     <!-- Paleta global: precisa ficar fora do escopo do Astro para valer nos style inline -->
     <style is:inline>
       :root {
-          /* Cor de referência da marca: laranja */
+        /* Cor de referência da marca: laranja */
         --brand: #ff7f00;
         --brand-deep: #b85a00;
         --brand-soft: #ff9f40;

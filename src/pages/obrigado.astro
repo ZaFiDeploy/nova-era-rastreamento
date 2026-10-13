@@ -12,6 +12,16 @@ const whatsappIcon = '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.2
 <html lang="pt-BR">
   <head>
     <BaseHead title={title} description={description} />
+    <style is:inline>
+      :root {
+        /* Cor de referência da marca: laranja (igual ao index.astro) */
+        --brand: #ff7f00;
+        --brand-deep: #b85a00;
+        --brand-soft: #ff9f40;
+        --brand-rgb: 255, 159, 64;
+        --brand-glow: 255, 127, 0;
+      }
+    </style>
   </head>
 
   <body style="background-color: #070710; color: #ffffff; min-height: 100vh; font-family: Inter, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -51,8 +61,8 @@ const whatsappIcon = '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.2
 
       <!-- SUBTÍTULO -->
       <p style="text-align: center; font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0 0 36px 0;">
-        Você está inscrito na live <strong style="color: rgba(255,255,255,0.85);">Sua Central Vale Quanto?</strong><br/>
-        Quarta-feira, 30/09, às 16H30. Entre no grupo para receber o link de acesso.
+        Você está inscrito na live <strong style="color: rgba(255,255,255,0.85);">O Futuro do Rastreamento Veicular</strong><br/>
+        Quarta-feira, 28/10, às 16H30. Entre no grupo para receber o link de acesso.
       </p>
 
       <!-- CARD CTA WHATSAPP -->
@@ -84,7 +94,7 @@ const whatsappIcon = '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.2
       <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 36px;">
         <div style="display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px 14px;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <span style="font-size: 12px; color: #d1d5db;">Quarta, <strong style="color: #ffffff;">30/09</strong></span>
+          <span style="font-size: 12px; color: #d1d5db;">Quarta, <strong style="color: #ffffff;">28/10</strong></span>
         </div>
         <div style="display: flex; align-items: center; gap: 7px; background: rgba(var(--brand-rgb),0.1); border: 1px solid rgba(var(--brand-rgb),0.3); border-radius: 10px; padding: 8px 14px;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--brand-soft);" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
