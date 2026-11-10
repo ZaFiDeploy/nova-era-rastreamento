@@ -1,6 +1,6 @@
 # A Nova Era do Rastreamento — landing page
 
-Landing da live **"Sua Central Vale Quanto?"** (8ª edição, 30/09), publicada em
+Landing da live **"Como começar a vender seguros na sua central"** (10ª edição, 25/11), publicada em
 https://anovaeradorastreamento.com.br.
 
 Feita em [Astro](https://astro.build), com estilos inline em cada página e Tailwind CSS v4
@@ -65,7 +65,7 @@ O Meta Pixel é carregado em `src/components/BaseHead.astro`, que toda página d
 | Título, data, horário, edição | `src/pages/index.astro` |
 | "Para quem é" e "Você vai aprender" | arrays `publico` e `aprendizados` no topo de `index.astro` |
 | Convidadas (nome, cargo, foto) | array `convidadas` em `index.astro` |
-| Cor da marca (rosa) | bloco `:root` no fim de `index.astro` (`--brand*`) |
+| Cor da marca (roxo) | bloco `:root` no fim de `index.astro` (`--brand*`) |
 | Link do grupo do WhatsApp | `WHATSAPP_GROUP` em `obrigado.astro` |
 | Imagem de compartilhamento (OG) | `src/components/BaseHead.astro` |
 
